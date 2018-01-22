@@ -5,15 +5,17 @@ font-family: 'Titillium Web', sans-serif;
 */
 
 body {
- height: 100vh;
  width: 100%;
+}
+
+#index {
+  height: auto;
 }
 
 #index {
   background: #EB3349;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100vh;
 }
 
 #splash {
@@ -79,4 +81,100 @@ body {
 .fa {
   color: white;
   padding-right: 0.3em;
+}
+
+#container-info{
+  background-color: white;
+}
+
+.restaurant-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  font-size: 0.7em;
+  padding: 0.8em 1.2em;
+}
+
+.restaurant-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#container-info-restaurants .fa {
+  color: #EB3349;
+}
+
+.btn-view-more {
+  background-color: #ff6c75;
+  display: inline;
+}
+
+.btn-view {
+  background-color: #ff6c75;
+  display: inline;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  float: right;
+  height: 4vh;
+  text-align: center;
+  text-decoration: none;
+}
+
+.modal-content {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 0.8em;
+}
+
+.modal-header {
+  background: #EB3349;  /* fallback for old browsers */
+
+}
+
+.modal-header {
+  width: 100%;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+}
+
+#order-now {
+  background-color: #ff6c75;
+  color: white;
+  margin-top: 1em;
+  width: 100%;
+}
+
+#restaurantModalTitle {
+  color: #b10022;
+  text-transform: uppercase;
+}
+
+.rating-restaurant {
+  color: #ff6c75;
+  font-weight: bold;
+}
+
+.rating {
+  color: #ff6c75;
+}
+
+.restaurant {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: -3em 0 0.5em 0;
+  padding-top: 2vh;
+  z-index: 100;
+}
+
+.close-modal {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 100%;
+  padding: 0 7px;
+}
+
+.general-data {
+  margin-top: 1em;
+  padding: 0 1em;
 }

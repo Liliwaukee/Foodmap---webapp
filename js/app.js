@@ -9,58 +9,62 @@ function loadpage() {
   $("#searcher").keyup(filterContacts);
 }
 
-function paintContactsInHtml (food) {
+function paintContactsInHtml (restaurantsInfo) {
   // crear elementos con DOM
-  var $newContact = $("<article />", {
-    "class": "card-panel hoverable"
+  var $newContact = $("<div />", {
+    "class": "restaurant-card"
   });
-  var $containerContactName = $("<h4 />");
-  var $deleteContactButton = $("<button type='button' />");
-  var  $removeIcono = $("<i />", {
-    "class": "material-icons"
-  });
-  var $containerContactPhone = $("<p />");
+  var $containerRestaurantName = $("<h5 />", {"class": "restaurant-name"});
+  var $ratingRestaurantIcon = $("<i />", {"class":"fa fa-star"});
+  var $viewMoreButton = $("<button type='button' />");
+  var $containerContactRating = $("<p />");
 
-  // Agregamos atributos y eventos a los elementos creados en el dom
-  $deleteContactButton.addClass("btn right");
-  $removeIcono.text("delete");
+  $viewMoreButton.addClass("btn-view")
+  $viewMoreButton.attr({
+       "data-toggle" : "modal",
+       "data-target" : "#restaurantModal"
+   });
+  $viewMoreButton.text("More Info");
 
 
   // Asignando valores
 
-  $deleteContactButton.append($removeIcono);
-  $containerContactName.text(food.name);
-  $containerContactPhone.text(food.phone);
+  //$viewMoreButton.append($removeIcono);
+  $containerRestaurantName.text(restaurantsInfo.name);
+  $containerContactRating.text(restaurantsInfo.rating);
 
-  $newContact.append($containerContactName);
-  $newContact.append($deleteContactButton);
-  $newContact.append($containerContactPhone);
+  $newContact.append($containerRestaurantName);
+  $newContact.append($containerContactRating);
+  $containerContactRating.prepend($ratingRestaurantIcon);
+  $containerContactRating.append($viewMoreButton);
+  //$newContact.append();
+
   // console.log($newContact);
   // agregamos lo que creamos con el Dom a un elemento existente del html
 
 
-  $("#publish-contacts").prepend($newContact);
+  $("#container-info-restaurants").prepend($newContact);
 
 };
 
 
 function filterContacts (){
-  var searchContact = $("#searcher").val().toLowerCase();
+  var searchRestaurants = $("#searcher").val().toLowerCase();
     if($("#searcher").val().trim().length > 0) {
       for (var i = 0; i < restaurants.length; i++) {
-        var food = restaurants[i].name;
-        var filteredContacts = restaurants.filter(function(food) {
-          return food.name.toLowerCase().indexOf(searchContact) >= 0;
+        var restaurantsInfo = restaurants[i].name;
+        var filteredRestaurants = restaurants.filter(function(restaurantsInfo) {
+          return restaurantsInfo.name.toLowerCase().indexOf(searchRestaurants) >= 0;
         });
       }
-      $("#publish-contacts").empty();
-      filteredContacts.forEach(function(food){
-        paintContactsInHtml(food);
+      $("#container-info-restaurants").empty();
+      filteredRestaurants.forEach(function(restaurantsInfo){
+        paintContactsInHtml(restaurantsInfo);
       });
     } else {
-      $("#publish-contacts").empty();
-      restaurants.forEach(function(food){
-        paintContactsInHtml(food);
+      $("#container-info-restaurants").empty();
+      restaurants.forEach(function(restaurantsInfo){
+        paintContactsInHtml(restaurantsInfo);
       });
     }
 }

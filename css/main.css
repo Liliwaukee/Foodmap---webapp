@@ -1,0 +1,82 @@
+/*
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+*/
+
+body {
+ height: 100vh;
+ width: 100%;
+}
+
+#index {
+  background: #EB3349;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+}
+
+#splash {
+  background: url("../assets/img/ingredients.png");
+  background-size: cover;
+  height: 100vh;
+}
+
+
+.logo-foodmap {
+  width: 75%;
+}
+
+#first-view {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #F45C43, #EB3349);
+}
+
+#map {
+  height: 50vh;
+  width: 100%
+}
+
+#container-map {
+  background-color: #b10022;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#coninter-searcher {
+  /*background: url("../assets/img/ingredients-gray.png") left;*/
+  height: 25vh;
+}
+
+#name-searcher {
+  color: white;
+  margin: 2em 0 1em 0;
+  border-bottom: 3px solid #EB3349;
+}
+
+#searcher {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#searcher:focus {
+  border: 2px solid #EB3349;
+}
+
+#container-logo {
+  height: 25vh;
+}
+
+#container-logo img{
+  width: 100%;
+}
+
+#coninter-searcher span img{
+  width: 10%;
+}
+
+.fa {
+  color: white;
+  padding-right: 0.3em;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#restaurantModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="restaurantModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7525.7649610089065!2d-99.16465562526328!3d19.417482997571636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1516579061346" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-body">
+          <div class="row restaurant">
+            <div class="col-11 offset-1">
+              <h5 class="modal-title" id="restaurantModalTitle">Nombre restaurante</h5>
+              <h6 class="d-inline-block rating">Rating:</h6>
+              <span class="rating-restaurant">4</span>
+              <p class="description-restaurant">Hogareño restaurante con estilo chic y menú de platos internacionales elaborados con ingredientes locales.</p>
+            </div>
+          </div>
+          <div class="general-data">
+            <h6>Direction:</h6>
+            <p class="direction-restaurant">Tonalá 133, Roma Nte., 06700 Ciudad de México</p>
+            <div class="row">
+              <div class="col-5">
+                <h6>Phone:</h6>
+                <span class="phone-restaurant">082 1287812 712</span>
+              </div>
+              <div class="col-5">
+                <h6>Pet frendly:</h6>
+                <span class="frendly-restaurant">Si</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 offset-3">
+              <button type="button" class="btn" data-dismiss="modal" id="order-now">Pedir ahora</button>
+            </div>
+            <div class="col-1 d-flex align-items-center">
+              <button type="button" class="close d-inline" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="close-modal">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

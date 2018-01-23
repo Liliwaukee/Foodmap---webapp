@@ -1,15 +1,15 @@
 
-function loadpage() {
-  $("#first-view").hide();
-  setTimeout(function() {$(".logo-foodmap").fadeOut( 800);}, 1500);
-  setTimeout(function() {$("#index").fadeOut(1500);}, 1000);
-  setTimeout(function () { $("#first-view").show(); }, 2000);
+function loadpage() { //Función a la que llamamos cuando cargue la página
 
+  setTimeout(function() {$(".logo-foodmap").fadeOut( 800);}, 1500); //splash
+  setTimeout(function() {$("#index").fadeOut(1500);}, 1000);//splash
+  setTimeout(function () { $("#first-view").removeClass("d-none") }, 2000);
 
-  $("#searcher").keyup(filterContacts);
+  $("#searcher").keyup(filterRestaurants); //llamamos a la función que va a filtrar los restaurantes
 }
 
-function paintContactsInHtml (restaurantsInfo) {
+//Función para pintar los restaurantes filtrados por su nombre
+function paintRestaurant (restaurantsInfo) {
   // crear elementos con DOM
   var $newContact = $("<div />", {
     "class": "restaurant-card"
@@ -22,10 +22,9 @@ function paintContactsInHtml (restaurantsInfo) {
   $viewMoreButton.addClass("btn-view")
   $viewMoreButton.attr({
        "data-toggle" : "modal",
-       "data-target" : "#restaurantModal"
+       "data-target" : ".restaurantModal"
    });
   $viewMoreButton.text("More Info");
-
 
   // Asignando valores
 
@@ -37,61 +36,48 @@ function paintContactsInHtml (restaurantsInfo) {
   $newContact.append($containerContactRating);
   $containerContactRating.prepend($ratingRestaurantIcon);
   $containerContactRating.append($viewMoreButton);
-  //$newContact.append();
 
-  // console.log($newContact);
   // agregamos lo que creamos con el Dom a un elemento existente del html
-
-
   $("#container-info-restaurants").prepend($newContact);
 
+  // agregamos la data de cada restaurante al modal
+  $viewMoreButton.click(function(paintRestaurantModal){
+    $(".restaurantModalTitle").text(restaurantsInfo.name);
+    $(".rating-restaurant").text(restaurantsInfo.rating);
+    $(".description-restaurant").text(restaurantsInfo.description);
+    $(".direction-restaurant").text(restaurantsInfo.direction);
+    $(".phone-restaurant").text(restaurantsInfo.phone);
+    if(restaurantsInfo.petFrendly === true) {
+      $(".frendly-restaurant").text("Sì");
+    } else {
+      $(".frendly-restaurant").text("No");
+    }
+  });
 };
 
-
-function filterContacts (){
+//Función para filtrar los restaurantes por su nombre
+function filterRestaurants (){
   var searchRestaurants = $("#searcher").val().toLowerCase();
     if($("#searcher").val().trim().length > 0) {
       for (var i = 0; i < restaurants.length; i++) {
         var restaurantsInfo = restaurants[i].name;
         var filteredRestaurants = restaurants.filter(function(restaurantsInfo) {
           return restaurantsInfo.name.toLowerCase().indexOf(searchRestaurants) >= 0;
+          console.log(filteredRestaurants);
         });
       }
       $("#container-info-restaurants").empty();
       filteredRestaurants.forEach(function(restaurantsInfo){
-        paintContactsInHtml(restaurantsInfo);
+        paintRestaurant(restaurantsInfo);
       });
     } else {
       $("#container-info-restaurants").empty();
       restaurants.forEach(function(restaurantsInfo){
-        paintContactsInHtml(restaurantsInfo);
+        paintRestaurant(restaurantsInfo);
       });
     }
 }
 
-  // console.log(filteredContacts);
 
-
-
-/*
-function filterContacts (){
-  var searchContact = $("#searcher").val().toLowerCase();
-    if($("#searcher").val().trim().length > 0) {
-        var filteredContacts = contacts.filter(function(contact) {
-           // console.log(contact);
-            return contact.name.toLowerCase().indexOf(searchContact) >= 0;
-        });
-      $("#publish-contacts").empty();
-      filteredContacts.forEach(function(contact){
-        paintContactsInHtml(contact);
-      });
-    } else {
-      $("#publish-contacts").empty();
-      contacts.forEach(function(contact){
-        paintContactsInHtml(contact);
-      });
-    }
-}
-*/
 
 $(document).ready(loadpage);

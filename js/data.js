@@ -6,7 +6,8 @@ var restaurants = [
       direction : "Tonalá 133, Roma Nte., 06700 Ciudad de México",
       phone : 52644291,
       rating : 4,
-      petFrendly : false
+      petFrendly : false,
+      comida : "nacional"
     },
 
    {
@@ -15,7 +16,8 @@ var restaurants = [
       direction : "Av. Yucatan 84, Roma Nte., 06700 Ciudad de México, CDMX",
       phone :  52647551,
       rating : 4,
-      petFrendly : true
+      petFrendly : true,
+      comida : "internacional"
     },
 
     {
@@ -25,6 +27,7 @@ var restaurants = [
       phone :  62732079,
       rating : 4,
       petFrendly : true,
+      comida : "nacional"
    },
 
    {
@@ -34,6 +37,7 @@ var restaurants = [
      phone :  55337804,
      rating : 5,
      petFrendly : true,
+     comida : "nacional"
    },
 
    {
@@ -43,6 +47,7 @@ var restaurants = [
     phone : 55116767,
     rating : 5,
     petFrendly : false,
+    comida : "internacional"
   },
 
   {
@@ -51,7 +56,8 @@ var restaurants = [
     direction : "Colima 65, Roma Nte., 06700 Ciudad de México, CDMX",
     phone : 68121073,
     rating : 5,
-    petFrendly : true
+    petFrendly : true,
+    comida : "internacional"
   },
 
   {
@@ -60,7 +66,8 @@ var restaurants = [
      direction : "Zacatecas 126, Roma Nte., 06700 Ciudad de México, CDMX",
      phone : 44374285,
      rating : 4,
-     petFrendly : false
+     petFrendly : false,
+     comida : "internacional"
    },
 
    {
@@ -69,7 +76,8 @@ var restaurants = [
      direction : "Guanajuato 138, Roma Nte., 06700 Ciudad de México, CDMX",
      phone : 63916089,
      rating : 5,
-     petFrendly : false
+     petFrendly : false,
+     comida : "nacional"
    },
 
    {
@@ -78,7 +86,8 @@ var restaurants = [
      direction : "Orizaba 76, Roma Nte., 06700 Ciudad de México, CDMX",
      phone : 65530689,
      rating : 3,
-     petFrendly : true
+     petFrendly : true,
+     comida : "nacional"
    },
 
    {
@@ -87,8 +96,9 @@ var restaurants = [
      direction : "Av. Álvaro Obregón 100, C. U. Benito Juárez, 06700 Ciudad de México, CDMX",
      phone : 12953434,
      rating : 3,
-     petFrendly : false
+     petFrendly : false,
+     comida : "internacional"
    }
-  
+
 
 ];

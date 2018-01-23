@@ -64,7 +64,7 @@ body {
 
 #searcher:focus {
   border: 2px solid #EB3349;
-  color: white;
+
 }
 
 #container-logo {
@@ -184,27 +184,13 @@ iframe {
   background: none;
   border: none;
   border-bottom: 1px solid white;
-  color: white;
   margin: 0;
   text-decoration: none;
   padding: 0;
   width: 78%;
 }
 
-#searcher-rating:focus {
-  border-color: white;
-  outline: none;
-}
-
-#searcher-rating::-webkit-input-placeholder {
-  color: #E0E0E0;
-}
-
-#searcher-rating::-moz-placeholder {
-  color: #E0E0E0;
-}
 
 #searcher-rating-text {
-  color: white;
   padding-right: 0.5em;
 }
